@@ -23,3 +23,14 @@
   width: 100%;
   display: flex;
 }
+#leftbar{
+  height: 100%;
+  width: 300px;
+  border: solid #f00 2px;
+}
+#contents{
+  height: 100%;
+  width: 100%;
+  min-width: 760px;
+  border: solid #0f0 2px;
+}
