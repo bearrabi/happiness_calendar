@@ -1,2 +1,15 @@
 body{  background-color: rgba(220,220,220,0.8);  }
 .bk_pink{ background-color: rgba(225, 192, 203, 1.0);  }
+
+/*leftbar*/
+#leftbar ul{
+  
+}
+#leftbar ul li{
+  list-style: none;
+  color: black;
+  
+  :hover{
+    background-color: rgba(220,220,220,0.8);
+  }
+}
