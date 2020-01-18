@@ -1,0 +1,49 @@
+/*headbar*/
+.headbar{
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+#humberger{  
+  margin: 0px 30px;  
+  height: 50px;
+  width: 50px;
+}
+#btn-humberger{
+  border: solid #00bfff 2px;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+/*main contents*/
+#main{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+#leftbar{
+  height: 100%;
+  width: 300px;
+  border: solid #f00 2px;
+}
+#leftbar ul{  width: 300px;  }
+
+#leftbar ul li{
+  padding: 10px 0px 10px 50px;
+  width: inherit;
+  margin-left: -40px;
+  box-sizing: border-box;
+}
+#leftbar ul li a{  
+  width: 300px;  
+  display: block;
+}
+
+#contents{
+  height: 100%;
+  width: 100%;
+  min-width: 760px;
+  border: solid #0f0 2px;
+}

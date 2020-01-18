@@ -11,6 +11,12 @@
  * It is generally better to create a new file per style scope.
  *
  */
+ //bootstrap and font-awesome
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+//original scss
+@import "position";
+@import "color";
+@import "font"
