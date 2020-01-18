@@ -11,6 +11,10 @@
 
   <body>
     <%= render partial: "parts/headbar" %>
-    <%= yield %>
+    <div id="main">
+      <%= render partial: "parts/leftbar" %>
+      <%= yield %>
+      
+    </div>
   </body>
 </html>
