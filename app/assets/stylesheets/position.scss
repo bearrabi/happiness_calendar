@@ -28,6 +28,18 @@
   width: 300px;
   border: solid #f00 2px;
 }
+#leftbar ul{
+  margin-top: 30px;
+  width: 300px;
+}
+
+#leftbar ul li{
+  padding: 10px 0px 10px 50px;
+  width: inherit;
+  margin-left: -40px;
+  box-sizing: border-box;
+}
+
 #contents{
   height: 100%;
   width: 100%;
