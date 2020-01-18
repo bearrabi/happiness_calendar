@@ -1,0 +1,28 @@
+body{  background-color: rgba(220,220,220,0.8);  }
+.bk_pink{ background-color: rgba(225, 192, 203, 1.0);  }
+.bk_gray{ }
+
+/*headbar*/
+#btn-humberger{ outline: none;  }
+#btn-humberger:hover{
+  background-color: rgba(120,120,120,0.8);
+  
+  i{ color: white; }
+}
+
+/*leftbar*/
+#leftbar{  border: solid #aaa 1px; }
+#leftbar ul li{
+  list-style: none;
+  a{  
+    color: black;  
+    text-decoration: none;
+  }
+}
+#leftbar ul li:hover{
+  background-color: rgba(120,120,120,0.8);  
+  a{ color: white;}
+}
+
+/*contents*/
+#contents{  border: solid #aaa 1px;}

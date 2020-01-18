@@ -10,6 +10,31 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: "parts/headbar" %>
+    <div id="main">
+      <%= render partial: "parts/leftbar" %>
+      <div id="contents">
+        <%= yield %>
+      </div>
+    </div>
+    <script>
+    
+    /*leftbarを表示したり隠したりする処理*/
+      $(function(){
+        $("#btn-humberger").on('click', function(){
+         let menu = $('#leftbar').css('display');
+         if (menu == 'none'){  
+            $('#leftbar').show(300);
+            $("#btn-humberger").children().removeClass('fas fa-angle-double-right');
+            $("#btn-humberger").children().addClass('fas fa-angle-double-left');
+          }
+          else{  
+            $('#leftbar').hide(300);
+            $("#btn-humberger").children().removeClass('fas fa-angle-double-left');
+            $("#btn-humberger").children().addClass('fas fa-angle-double-right');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

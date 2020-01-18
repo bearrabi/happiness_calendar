@@ -62,3 +62,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+
+#bootstrap font-awesome
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.2.0'
