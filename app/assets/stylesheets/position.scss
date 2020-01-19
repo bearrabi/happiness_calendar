@@ -53,3 +53,10 @@
   margin: 30px auto 30px 120px; 
 }
 
+.page_form{
+  margin: 30px auto 30px 120px;
+  width: calc(100% - 360px);
+  min-width: 460px;
+  padding: 50px;
+  border: solid #f00 2px;
+}
