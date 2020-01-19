@@ -31,5 +31,17 @@ body{  background-color: rgba(220,220,220,0.8);  }
 .page_form{  
   border: solid rgba(225, 192, 203, 1.0) 2px;
   background-color: rgba(224,255,255,0.4); 
-  
+}
+
+.actions button[type="submit"]{
+  box-shadow: 0px 4px 3px;
+  outline: none;
+}
+#loginbtn{
+  background-color: #e6e6fa;
+}
+
+
+.actions button[type="submit"]:active{
+  box-shadow: 0px 0px;
 }
