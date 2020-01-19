@@ -28,7 +28,7 @@
     <% end %>
   
     <div class="actions">
-      <%= f.submit "Log in" %>
+      <%= f.button "#{content_tag(:i, '', class: 'fas fa-sign-in-alt')}      Log in".html_safe, type: :submit %>
     </div>
   <% end %>
 </div>

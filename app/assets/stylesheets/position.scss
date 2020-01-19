@@ -65,6 +65,19 @@
   margin-bottom: 40px;
 }
 
+.field input[type="text"], .field input[type="email"], .field input[type="password"]{
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 5px;
+
+.actions input[type="submit"]{
+  
+}  
+
+}
+
 .page_shared_links{
   margin: 30px auto 30px 120px;
 }
