@@ -30,7 +30,7 @@
     </div>
   
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.button "#{content_tag(:i, '', class: 'fas fa-file-signature')}  Sign up".html_safe, type: :submit, class: "bk_pink" %>
     </div>
   <% end %>
 </div>
