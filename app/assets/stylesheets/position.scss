@@ -80,4 +80,8 @@
 }  
 .page_shared_links{
   margin: 30px auto 30px 120px;
+  display: flex;
+}
+.page_shared_links a{
+  margin-right: 50px;
 }
