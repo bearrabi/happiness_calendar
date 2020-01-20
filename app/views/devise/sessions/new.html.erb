@@ -3,8 +3,11 @@
 </div>
 
 <div class="page_form">
-  <p><%= notice %></p>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    
+    <% if alert %>
+      <p class='alert alert-danger'><%= alert %></p>
+    <% end %>
     
     <div class="field">
       <%= f.label :nickname, class: "title" %><br />
