@@ -1,7 +1,10 @@
-<h2>Forgot your password?</h2>
+<div class="page_title">
+  <h2>Forgot your password?</h2>
+</div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="page_form">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -9,8 +12,12 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.button "#{content_tag(:i, '', class: 'far fa-envelope')}  Send me reset password".html_safe, type: :submit, class: "bk_pink" %>
   </div>
-<% end %>
+  
+  <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+<div class="page_shared_links">
+  <%= render "devise/shared/links" %>
+</div>
