@@ -46,6 +46,7 @@
   width: 100%;
   min-width: 760px;
   border: solid #0f0 2px;
+  overflow: auto;
 }
 
 /*devise page*/
@@ -84,4 +85,8 @@
 }
 .page_shared_links a{
   margin-right: 50px;
+}
+.del_link{
+  margin-left: 120px;
+  margin-bottom: 30px;
 }
