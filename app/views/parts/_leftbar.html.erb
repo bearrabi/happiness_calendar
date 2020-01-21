@@ -1,9 +1,12 @@
 <div id="leftbar" class="bk_pink">
   <ul>
+    <% if user_signed_in? %>
+      <li><%= link_to 'acount', "#", class: "menu" %></li>
+      <li><%= link_to 'show all message', "#", class: "menu" %></li>
+      <li><%= link_to 'log out', destroy_user_session_path ,method: :delete, class: "menu" %></li>
+    <% else %>
      <li><%= link_to 'log in', new_user_session_path, class: "menu" %></li>
      <li><%= link_to 'sign up', new_user_registration_path, class: "menu" %></li>
-     <li><%= link_to 'acount', "#", class: "menu" %></li>
-     <li><%= link_to 'show all message', "#", class: "menu" %></li>
-     <li><%= link_to 'log out', destroy_user_session_path ,method: :delete, class: "menu" %></li>
+    <% end %>
   </ul>
 </div>
