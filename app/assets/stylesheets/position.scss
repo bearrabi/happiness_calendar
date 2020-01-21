@@ -47,3 +47,41 @@
   min-width: 760px;
   border: solid #0f0 2px;
 }
+
+/*devise page*/
+.page_title{
+  margin: 30px auto 30px 120px; 
+}
+
+.page_form{
+  margin: 30px auto 30px 120px;
+  width: calc(100% - 360px);
+  min-width: 460px;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.field{
+  margin-bottom: 40px;
+}
+
+.field input[type="text"], .field input[type="email"], .field input[type="password"]{
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 5px;
+}
+.actions button[type="submit"]{
+  padding: 5px;
+  height: 50px;
+  width: 100%;
+  border-radius: 20px;
+}  
+.page_shared_links{
+  margin: 30px auto 30px 120px;
+  display: flex;
+}
+.page_shared_links a{
+  margin-right: 50px;
+}

@@ -1,0 +1,42 @@
+<div class="page_title">
+  <h2 class="title">Log in</h2>
+</div>
+
+<div class="page_form">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    
+    <% if alert %>
+      <p class='alert alert-danger'><%= alert %></p>
+    <% end %>
+    
+    <div class="field">
+      <%= f.label :nickname, class: "title" %><br />
+      <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :email, class: "title" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password, class: "title" %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+  
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me, class: "title" %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+  
+    <div class="actions">
+      <%= f.button "#{content_tag(:i, '', class: 'fas fa-sign-in-alt')}  Log in".html_safe, type: :submit, class: "bk_pink" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="page_shared_links">
+  <%= render "devise/shared/links" %>
+</div>
