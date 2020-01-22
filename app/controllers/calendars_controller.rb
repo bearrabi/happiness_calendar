@@ -2,9 +2,15 @@ class CalendarsController < ApplicationController
   before_action :move_to_signin, except: :index
   
   def index
-    @today = {year: Time.zone.now.year, month: Time.zone.now.month}
+    @dates = Time.zone.now
+    #@dates = {year: Time.zone.now.year, month: Time.zone.now.month}
+    #@timezone = Time.zone.now
+    @messages = ""
   end
+  
   def show
+    @dates = {year: params[:year], month: params[:month]}
+    @messages = ""
   end
   
   private 
