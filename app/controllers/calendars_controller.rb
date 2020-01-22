@@ -8,7 +8,7 @@ class CalendarsController < ApplicationController
     @messages = ""
   end
   
-  def show
+  def change
     @dates = {year: params[:year], month: params[:month]}  #ここはindexと同じように修正が必要
     @messages = ""
   end
