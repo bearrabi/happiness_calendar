@@ -16,12 +16,12 @@
 <div class="calendar">
   <table>
     <tr><th class="sunday">日</th><th class="normal">月</th><th class="normal">火</th><th class="normal">水</th><th class="normal">木</th><th class="normal">金</th><th class="saturday">土</th></tr>
-    <% @calendars.each_with_index do |cal, i| %>
+    <% @calendars.each do |cal| %>
       <tr>
-      <% cal.each do |week| %>
+      <% cal.each_with_index do |week,i| %>
         <td>
-          <div class="daybox wday-<%= i%7 %>">
-            <p class="<%= week[:month] %>-wday-<%= i%7 %>"><%= week[:day].to_s %></p>
+          <div class="daybox wday-<%= i.to_s %>">
+            <p class="<%= week[:month] %>-wday-<%= i.to_s %>"><%= week[:day].to_s %></p>
             <%= link_to 'edit' , "" ,method: :post, remote: true, class: "edit" %>
           </div>
         </td>
