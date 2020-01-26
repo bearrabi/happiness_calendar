@@ -48,7 +48,7 @@ class CalendarsController < ApplicationController
     for i in 0..firstday_of_month.wday-1
       index = (-1) * (i - firstday_of_month.wday)
       target_day = firstday_of_month.ago(index.days)
-      hash_1dayinfo = {"day": target_day.day,"month": target_day.month, "term": "prev"}
+      hash_1dayinfo = {"dateinfo": target_day, "term": "prev"}
       daysinfo_arr.push(hash_1dayinfo) 
     end
     
@@ -57,10 +57,12 @@ class CalendarsController < ApplicationController
   
   #カレンダーで表示する当月分の情報取得
   def get_currentmonth_info(m_dates)
+    firstday_of_month = m_dates.beginning_of_month
     
     daysinfo_arr = []
-    for i in 1..m_dates.end_of_month.day
-      hash_1dayinfo = {"day": i, "month": m_dates.month, "term": "curr"}
+    for i in 0..m_dates.end_of_month.day-1
+      target_day = firstday_of_month.since(i.days)
+      hash_1dayinfo = {"dateinfo": target_day, "term": "curr"}
       daysinfo_arr.push(hash_1dayinfo)
     end
     
@@ -73,7 +75,8 @@ class CalendarsController < ApplicationController
     
     daysinfo_arr = []
     for i in 1..(6 - last_of_month.wday)
-      hash_1dayinfo = {"day": i,"month": m_dates.next_month, "term": "next"}
+      target_day = last_of_month.since(i.days)
+      hash_1dayinfo = {"dateinfo": target_day, "term": "next"}
       daysinfo_arr.push(hash_1dayinfo)
     end
     
