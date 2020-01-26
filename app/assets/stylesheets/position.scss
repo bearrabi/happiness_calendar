@@ -103,7 +103,7 @@
 .calendar{
   margin-right: auto;
   width: 88%;
-  height: 600px;
+  height: 100%;
   table{
     width: 100%;
     height: 100%;
@@ -116,7 +116,7 @@
       .daybox{  
         padding: 10px;
         width: 100%;
-        height: 100%;
+        height: 130px;
         position: relative;
         
         .edit{
@@ -127,6 +127,7 @@
           bottom: 0;
           margin-right: auto;
           margin-bottom: 7px;
+          border-radius: 10px;
         }
       }
       

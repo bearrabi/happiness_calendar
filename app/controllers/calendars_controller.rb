@@ -47,7 +47,8 @@ class CalendarsController < ApplicationController
     daysinfo_arr = []
     for i in 0..firstday_of_month.wday-1
       index = (-1) * (i - firstday_of_month.wday)
-      hash_1dayinfo = {"day": firstday_of_month.ago(index.days).day, "month": "prev"}
+      target_day = firstday_of_month.ago(index.days)
+      hash_1dayinfo = {"day": target_day.day,"month": target_day.month, "term": "prev"}
       daysinfo_arr.push(hash_1dayinfo) 
     end
     
@@ -59,7 +60,7 @@ class CalendarsController < ApplicationController
     
     daysinfo_arr = []
     for i in 1..m_dates.end_of_month.day
-      hash_1dayinfo = {"day": i, "month": "curr"}
+      hash_1dayinfo = {"day": i, "month": m_dates.month, "term": "curr"}
       daysinfo_arr.push(hash_1dayinfo)
     end
     
@@ -72,7 +73,7 @@ class CalendarsController < ApplicationController
     
     daysinfo_arr = []
     for i in 1..(6 - last_of_month.wday)
-      hash_1dayinfo = {"day": i, "month": "next"}
+      hash_1dayinfo = {"day": i,"month": m_dates.next_month, "term": "next"}
       daysinfo_arr.push(hash_1dayinfo)
     end
     

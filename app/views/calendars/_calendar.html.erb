@@ -21,7 +21,7 @@
       <% cal.each_with_index do |week,i| %>
         <td>
           <div class="daybox wday-<%= i.to_s %>">
-            <p class="<%= week[:month] %>-wday-<%= i.to_s %>"><%= week[:day].to_s %></p>
+            <p class="<%= week[:term] %>-wday-<%= i.to_s %>"><%= week[:day].to_s %></p>
             <%= link_to 'message edit' , "" ,method: :post, remote: true, class: "edit" %>
           </div>
         </td>
