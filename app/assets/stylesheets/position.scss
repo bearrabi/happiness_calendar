@@ -90,3 +90,47 @@
   margin-left: 120px;
   margin-bottom: 30px;
 }
+
+/*calendar*/
+.date,.change,.calendar{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 120px;
+}
+.change a{
+  margin-right: 30px;
+}
+.calendar{
+  margin-right: auto;
+  width: 88%;
+  height: 100%;
+  table{
+    width: 100%;
+    height: 100%;
+    
+    tr th{ 
+      height: 20px; 
+      padding-left: 7px;
+    }
+    tr td{
+      .daybox{  
+        padding: 10px;
+        width: 100%;
+        height: 130px;
+        position: relative;
+        
+        .edit{
+          display: block;
+          width: 90%;
+          position: absolute;
+          text-align: center;
+          bottom: 0;
+          margin-right: auto;
+          margin-bottom: 7px;
+          border-radius: 10px;
+        }
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="page_title">
+  <h2 class="title">Calendar</h2>
+</div>
+
+<div class="date">
+  <span><%= dateinfo.year.to_s %>年</span>
+  <span><%= dateinfo.month.to_s %>月</span>
+</div>
+
+<div class="change">
+  <%= link_to '◀ Previus month ' , "calendars/year/#{dateinfo.prev_month.year.to_s}/month/#{dateinfo.prev_month.month.to_s}" ,method: :post,remote: true %>
+  <%= link_to 'Next month ▶' , "calendars/year/#{dateinfo.next_month.year.to_s}/month/#{dateinfo.next_month.month.to_s}", method: :post, remote: true %>
+</div>
+
+
+<div class="calendar">
+  <table>
+    <tr><th class="sunday">日</th><th class="normal">月</th><th class="normal">火</th><th class="normal">水</th><th class="normal">木</th><th class="normal">金</th><th class="saturday">土</th></tr>
+    <% @calendars.each do |cal| %>
+      <tr>
+      <% cal.each_with_index do |week,i| %>
+        <td>
+          <div class="daybox wday-<%= i.to_s %>">
+            <p class="<%= week[:term] %>-wday-<%= i.to_s %>"><%= week[:day].to_s %></p>
+            <%= link_to 'message edit' , "" ,method: :post, remote: true, class: "edit" %>
+          </div>
+        </td>
+      <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
