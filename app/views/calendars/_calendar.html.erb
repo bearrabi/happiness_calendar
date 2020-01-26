@@ -7,8 +7,8 @@
   <span><%= dateinfo.month.to_s %>月</span>
 </div>
 
-<div class="move">
-  <%= link_to '◀️　Previus mont ' , "calendars/year/#{dateinfo.prev_month.year.to_s}/month/#{dateinfo.prev_month.month.to_s}" ,method: :post,remote: true %>
+<div class="change">
+  <%= link_to '◀ Previus month ' , "calendars/year/#{dateinfo.prev_month.year.to_s}/month/#{dateinfo.prev_month.month.to_s}" ,method: :post,remote: true %>
   <%= link_to 'Next month ▶' , "calendars/year/#{dateinfo.next_month.year.to_s}/month/#{dateinfo.next_month.month.to_s}", method: :post, remote: true %>
 </div>
 
