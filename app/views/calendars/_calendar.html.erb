@@ -15,14 +15,14 @@
 
 <div class="calendar">
   <table>
-    <tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
-    <% @calendars.each do |cal| %>
+    <tr><th class="wday-0">日</th><th class="wday-1">月</th><th class="wday-2">火</th><th class="wday-3">水</th><th class="wday-4">木</th><th class="wday-5">金</th><th class="wday-6">土</th></tr>
+    <% @calendars.each_with_index do |cal, i| %>
       <tr>
       <% cal.each do |week| %>
         <td>
-          <p class="<%=week[:month] %>"><%= week[:day].to_s%></p>
           <div class="daybox">
-            <%= link_to 'edit' , "" ,method: :post,remote: true %>
+            <p class="<%= week[:month] %>-wday-<%= i%7 %>"><%= week[:day].to_s %></p>
+            <%= link_to 'edit' , "" ,method: :post, remote: true, class: "edit" %>
           </div>
         </td>
       <% end %>
