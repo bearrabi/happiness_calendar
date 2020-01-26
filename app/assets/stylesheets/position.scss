@@ -108,19 +108,21 @@
     width: 100%;
     height: 100%;
     
-    tr th{ height: 20px; }
+    tr th{ 
+      height: 20px; 
+      padding-left: 7px;
+    }
     tr td{
       .daybox{  
+        padding: 7px;
         width: 100%;
         height: 100%;
-        border: solid #f00 2px;  
         position: relative;
         
         .edit{
           display: block;
           width: 100%;
           position: absolute;
-          margin: 7px;
           text-align: center;
           bottom: 0;
         }

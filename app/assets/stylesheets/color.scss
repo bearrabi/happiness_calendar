@@ -52,7 +52,14 @@ body{  background-color: rgba(220,220,220,0.8);  }
 /*calendar*/
 .calendar{
   table{
-        tr th{ border: solid #000 2px; }
+        tr th{ 
+          border: solid #000 2px; 
+          border-bottom: double #000 2px;
+        }
         tr td{  border: solid #000 2px;  }
   }
+}
+.sunday{
+  background-color: rgba(225, 192, 203, 1.0);
+  color: red;
 }
