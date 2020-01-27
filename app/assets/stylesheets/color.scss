@@ -69,10 +69,16 @@ body{  background-color: rgba(220,220,220,0.8);  }
 }
 
 .daybox{
-  .edit{
+  .edit,.new{
     border: solid #777 1px;
     text-decoration: none;
+  }
+  .edit{
     background-color: #808080;
+    color: white;
+  }
+  .new{
+    background-color: rgb(25,25,112);
     color: white;
   }
 }
