@@ -72,15 +72,18 @@ body{  background-color: rgba(220,220,220,0.8);  }
   .edit,.new{
     border: solid #777 1px;
     text-decoration: none;
+    color: black;
   }
   .edit{
-    background-color: #808080;
-    color: white;
+    background-color: rgba(225, 192, 203, 1.0);
   }
   .new{
-    background-color: rgb(25,25,112);
-    color: white;
+    background-color: rgba(173, 216, 230, 1.0);
+    
   }
+}
+.daybox:hover{
+        background-color: rgba(105,105,105, 0.8);
 }
   
 
