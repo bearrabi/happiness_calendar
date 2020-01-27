@@ -8,10 +8,11 @@ class MessagesController < ApplicationController
   end
   
   def new
+    @dateinfo = {"year": params[:year], "month": params[:month], "day": params[:day] }
   end
   
   def create
-  cd end
+  end
   
   ##特定ユーザーかつ、特定の日付のメッセージリストを表示
   def show_parts
