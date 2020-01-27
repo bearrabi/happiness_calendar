@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
   end
   
   def create
-  end
+  cd end
   
   ##特定ユーザーかつ、特定の日付のメッセージリストを表示
   def show_parts

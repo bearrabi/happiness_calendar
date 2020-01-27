@@ -122,13 +122,25 @@
         position: relative;
         
         .edit{
-          display: block;
-          width: 90%;
+          display: inline-block;
+          width: 45%;
           position: absolute;
           text-align: center;
           bottom: 0;
           margin-right: auto;
           margin-bottom: 7px;
+          left: 7px;
+          border-radius: 10px;
+        }
+        .new{
+          display: inline-block;
+          width: 45%;
+          position: absolute;
+          text-align: center;
+          bottom: 0;
+          margin-right: auto;
+          margin-bottom: 7px;
+          right: 7px;
           border-radius: 10px;
         }
       }
