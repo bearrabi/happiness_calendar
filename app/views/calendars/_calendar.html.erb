@@ -22,7 +22,8 @@
         <td>
           <div class="daybox wday-<%= i.to_s %>">
             <p class="<%= week[:term] %>-wday-<%= i.to_s %>"><%= week[:dateinfo].day.to_s %></p>
-            <%= link_to 'message edit' , "messages_parts/year/#{week[:dateinfo].year.to_s}/month/#{week[:dateinfo].month.to_s}/day/#{week[:dateinfo].day.to_s}", class: "edit" %>
+            <%= link_to 'edit' , "messages_parts/year/#{week[:dateinfo].year.to_s}/month/#{week[:dateinfo].month.to_s}/day/#{week[:dateinfo].day.to_s}", class: "edit" %>
+            <%= link_to 'new', '', class: "new"%>
           </div>
         </td>
       <% end %>
