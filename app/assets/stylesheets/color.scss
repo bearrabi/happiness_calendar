@@ -59,14 +59,17 @@ body{  background-color: rgba(220,220,220,0.8);  }
         tr td{  border: solid #000 2px;  }
   }
 }
-.sunday,.wday-0{
+
+.sunday,.wday-0{  
+  color: rgb(255,0,102);  
   background-color: rgba(225, 192, 203, 1.0);
-  color: rgb(255,0,102);
 }
-.saturday,.wday-6{
+.saturday,.wday-6{  
+  color: rgb(50,50,255);  
   background-color: rgba(173, 216, 230, 1.0);
-  color: rgb(50,50,255);
 }
+.wday-0 p{  color: rgb(255,0,102);  }
+.wday-6 p{  color: rgb(50,50,255);  }
 
 .daybox{
   .edit,.new{
@@ -82,8 +85,8 @@ body{  background-color: rgba(220,220,220,0.8);  }
     
   }
 }
-.daybox:hover{
-        background-color: rgba(105,105,105, 0.8);
+.daybox:hover{  background-color: rgba(105,105,105, 0.8);  }
+.prev p, .next p{
+  opacity: 0.3;
 }
-  
 
