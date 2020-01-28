@@ -1,4 +1,38 @@
 <div class="page_title">
-  <h2 class="title">page_title</h2>
+  <h2 class="title"><%= @page_title %></h2>
 </div>
 
+<div class="input_form">
+    <%= form_tag(messages_path, method: :post) do %>
+    
+      <div class="input_date">
+        <%= text_field_tag :year, @dateinfo[:year].to_s %><%= label_tag :year, "年" %>
+        <%= text_field_tag :month, @dateinfo[:month].to_s %><%= label_tag :month, "月" %>
+        <%= text_field_tag :day, @dateinfo[:day].to_s %><%= label_tag :day, "日" %>
+      </div>
+    
+      <div class="field">
+        <%= label_tag :to_name, "送る相手の名前" %><br />
+        <%= text_field_tag :to_name, "" %>
+      </div>
+      
+      <div class="field">
+        <%= label_tag :to_email, "送る相手のメールアドレス" %><br />
+        <%= text_field_tag :to_email, "" %>
+      </div>
+      
+      <div class="field">
+        <%= label_tag :title, "タイトル" %><br />
+        <%= text_field_tag :title, "", placeholder: "「〜さんへ」等、メールのタイトルになります。" %>
+      </div>
+      
+      <div class="field">
+        <%= label_tag :contents, "本文" %><br />
+        <%= text_field_tag :contents, "", placeholder: "メールの本文をここへ入力してください。" %>
+      </div>
+      
+      <div class="actions">
+        <%= submit_tag "Save", class: "save" %>
+      </div>
+    <% end %>
+</div>
