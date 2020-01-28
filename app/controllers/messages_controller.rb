@@ -16,15 +16,23 @@ class MessagesController < ApplicationController
   def edit
     message = Message.find(params[:id])
     @messages = {"to_name": message.to_name, "to_email": message.to_email, "title": message.title, "contents": message.contents }
-    @dateinfo = {"year": message.date.year, "month": message.date.month, "day": message.date.day }
+    days = Day.find(message.day_id)
+    @dateinfo = {"year": days.date.year, "month": days.date.month, "day": days.date.day }
     @page_tilte = "Edit message"
+  end
+  
+  def update
+    date = Time.local(date_params[:year].to_i, date_params[:month].to_i, date_params[:day].to_i)
+    dayinfo = Day.find_or_create_by(date: date, user_id: current_user.id)
+    Message.update(to_name: message_params[:to_name], to_email: message_params[:to_email], title: message_params[:mail_title], contents: message_params[:mail_contents], day_id: dayinfo.id, user_id: current_user.id)
+    redirect_to "/messages_all/#{current_user.id.to_s}"
   end
   
   def create
     date = Time.local(date_params[:year].to_i, date_params[:month].to_i, date_params[:day].to_i)
     dayinfo = Day.find_or_create_by(date: date, user_id: current_user.id)
     Message.create(to_name: message_params[:to_name], to_email: message_params[:to_email], title: message_params[:mail_title], contents: message_params[:mail_contents], day_id: dayinfo.id, user_id: current_user.id)
-    redirect_to ""
+    redirect_to "/messages_all/#{current_user.id.to_s}"
   end
   
   ##特定ユーザーかつ、特定の日付のメッセージリストを表示

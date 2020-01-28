@@ -1,9 +1,9 @@
 <div class="page_title">
-  <h2 class="title"><%= @page_title %></h2>
+  <h2 class="title"><%= @page_tilte %></h2>
 </div>
 
 <div class="page_form">
-  <%= form_tag(messages_path, method: :putch) do %>
+  <%= form_tag(message_path, method: :patch) do %>
     <div class="input_date">
       <%= text_field_tag :year, @dateinfo[:year].to_s %><%= label_tag :year, "年" %>
       <%= text_field_tag :month, @dateinfo[:month].to_s %><%= label_tag :month, "月" %>
