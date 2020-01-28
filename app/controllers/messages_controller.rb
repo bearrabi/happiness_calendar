@@ -8,10 +8,19 @@ class MessagesController < ApplicationController
   end
   
   def new
+    @messages = nil
     @dateinfo = {"year": params[:year], "month": params[:month], "day": params[:day] }
+    @page_title = "New message"
+  end
+  
+  def edit
+    @message = Message.find(params[:id])
+    @dateinfo = {"year": message.date.year, "month": message.date.month, "day": message.date.day }
+    @page_tilte = "Edit message"
   end
   
   def create
+    dayinfo = Day.find_or_create_by(date: Time.local(params[:year].to_i, params[:month].to_i, params[:day].to_i), user_id: current_user.id)
   end
   
   ##特定ユーザーかつ、特定の日付のメッセージリストを表示
@@ -27,5 +36,8 @@ class MessagesController < ApplicationController
   
   def message_params
     params.permit[:to_name, :to_email, :title, :contents, :user_id, :day_id]
+  end
+  def date_params
+    params.permit[:date]
   end
 end
