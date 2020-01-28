@@ -161,4 +161,10 @@
 .message_list{
   margin-left: 120px;
   padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.msg{
+  
 }
