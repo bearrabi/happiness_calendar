@@ -35,7 +35,7 @@ class MessagesController < ApplicationController
   end
   
   def message_params
-    params.permit[:to_name, :to_email, :title, :contents, :user_id, :day_id]
+    params.permit[:to_name, :to_email, :mail_title, :mail_contents, :user_id, :day_id]
   end
   def date_params
     params.permit[:year, :month, :day]
