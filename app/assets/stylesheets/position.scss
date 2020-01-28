@@ -127,7 +127,7 @@
         height: 130px;
         position: relative;
         
-        .edit, .new{
+        .show, .new{
           display: none;
           width: 40%;
           position: absolute;
@@ -137,11 +137,11 @@
           margin-bottom: 7px;
           border-radius: 10px;
         }
-        .edit{ left: 7px;  }
+        .show{ left: 7px;  }
         .new{  right: 7px;  }
       }
       .daybox:hover{
-        .edit, .new{ display: inline-block;}
+        .show, .new{ display: inline-block;}
       }
     }
   }
@@ -154,30 +154,4 @@
     width: 50px;
     text-align: right;
   }
-}
-
-
-/*message show*/
-.message_list{
-  margin-left: 120px;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.msg{
-  width: 300px;
-  height: 200px;
-  margin-right: 30px;
-  padding: 20px;
-}
-.msg_title{
-  margin-bottom: 20px;
-}
-.edit_btn,.delete_btn{
-  display: inline-block;
-  margin-right: 10px;
-  width: 100px;
-  margin-top: 20px;
-  border-radius: 10px;
 }
