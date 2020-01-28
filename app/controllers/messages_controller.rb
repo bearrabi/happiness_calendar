@@ -23,8 +23,8 @@ class MessagesController < ApplicationController
   def create
     date = Time.local(date_params[:year].to_i, date_params[:month].to_i, date_params[:day].to_i)
     dayinfo = Day.find_or_create_by(date: date, user_id: current_user.id)
-    Message.find_or_create_by(to_name: message_params[:to_name], to_email: message_params[:to_email], title: message_params[:mail_title], contents: message_params[:mail_contents], day_id: dayinfo.id, user_id: current_user.id)
-    redirect_to "messages_all/#{current_user.id}"
+    Message.create(to_name: message_params[:to_name], to_email: message_params[:to_email], title: message_params[:mail_title], contents: message_params[:mail_contents], day_id: dayinfo.id, user_id: current_user.id)
+    redirect_to ""
   end
   
   ##特定ユーザーかつ、特定の日付のメッセージリストを表示

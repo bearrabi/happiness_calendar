@@ -96,6 +96,14 @@ body{  background-color: rgba(220,220,220,0.8);  }
   border: solid rgba(225, 192, 203, 1.0) 2px;
 }
 .edit_btn,.delete_btn{ 
-  display: inline-block;
+  text-decoration: none;
+  border: solid #777 1px;
 }
-
+.edit_btn{ 
+  color: black;
+  background-color: rgba(225, 192, 203, 1.0); 
+}
+.delete_btn{
+  background-color: rgba(105,105,105, 0.8);
+  color: white;
+}

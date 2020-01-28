@@ -2,6 +2,9 @@
   <h2 class="title">Message list</h2>
 </div>
 
+<% if messages == nil%>
+  <p>メッセージはありません</p>
+<% else %>
 <div class="message_list">
   <% messages.each do |msg| %>
   <div class="msg">
@@ -14,3 +17,4 @@
   </div>
   <% end %>
 </div>
+<% end %>
