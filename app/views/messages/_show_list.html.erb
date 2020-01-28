@@ -5,8 +5,8 @@
 <div class="message_list">
   <% messages.each do |msg| %>
   <div class="msg">
-    <h3 class="msg_title"><%= msg.title %></h3>
-    <p class="msg_to_name"><%= msg.to_name %>さんへのメッセージ</p>
+    <h3 class="msg_title">タイトル：<%= msg.title %></h3>
+    <p class="msg_to_name">要約：<%= msg.to_name %>さんへのメッセージです</p>
     <div class="btn">
       <%= link_to '編集', edit_message_path(msg.id), class: "edit_btn"%>
       <%= link_to '削除', message_path(msg.id), method: :delete, class: "delete_btn"%>
