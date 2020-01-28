@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root "calendars#index"
   post "calendars/year/:year/month/:month" => "calendars#change"
   get "messages_parts/year/:year/month/:month/day/:day" => "messages#show_parts"
+  get "messages_all/:id" => "messages#show_all"
   get "new_message/year/:year/month/:month/day/:day" => "messages#new"
 end

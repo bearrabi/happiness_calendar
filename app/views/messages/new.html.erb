@@ -12,22 +12,22 @@
     
     <div class="field">
       <%= label_tag :to_name, "送る相手の名前" %><br />
-      <%= text_field_tag :to_name, "" %>
+      <%= text_field_tag :to_name, @messages[:to_name] %>
     </div>
     
     <div class="field">
       <%= label_tag :to_email, "送る相手のメールアドレス" %><br />
-      <%= text_field_tag :to_email, "" %>
+      <%= text_field_tag :to_email, @messages[:to_email] %>
     </div>
     
     <div class="field">
       <%= label_tag :mail_title, "タイトル" %><br />
-      <%= text_field_tag :mail_title, "",{placeholder: "「〜さんへ」等、メールのタイトルを入力してください"} %>
+      <%= text_field_tag :mail_title, @messages[:title], {placeholder: "「〜さん」のようにメールのタイトルを入力してください"} %>
     </div>
     
     <div class="field">
       <%= label_tag :mail_contents, "本文" %><br />
-      <%= text_area_tag :mail_contents, "",{placeholder: "メールの本文を入力してください"} %>
+      <%= text_area_tag :mail_contents, safe_join(@messages[:contents].split("¥n"), tag(:br)), {placeholder: "メールの本文を入力してください" } %>
       <%#= text_area_tag :contents,"", {autofocus: true, autocomplete: "off", placeholder: 'メールの本文をここへ入力してください。'} %>
     </div>
     
