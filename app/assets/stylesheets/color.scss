@@ -32,7 +32,7 @@ body{  background-color: rgba(220,220,220,0.8);  }
 #contents{  border: solid #aaa 1px;}
 
 /*devise page*/
-.page_form{  
+.page_form, .msg{  
   border: solid rgba(225, 192, 203, 1.0) 2px;
   background-color: rgba(224,255,255,0.4); 
 }
@@ -92,5 +92,16 @@ body{  background-color: rgba(220,220,220,0.8);  }
 .daybox:hover{  background-color: rgba(105,105,105, 0.8);  }
 .prev p, .next p{
   opacity: 0.3;
+}
+.delete_btn{
+  background-color: rgba(120,120,120,0.8);
+  color: white;
+  
+  text-decoration: none;
+}
+.edit_btn{
+  background-color: rgba(225, 192, 203, 1.0);
+  color: black;
+  text-decoration: none;
 }
 
