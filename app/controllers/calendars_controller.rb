@@ -48,8 +48,7 @@ class CalendarsController < ApplicationController
     for i in 0..firstday_of_month.wday-1
       index = (-1) * (i - firstday_of_month.wday)
       target_day = firstday_of_month.ago(index.days)
-      hash_1dayinfo = {"dateinfo": target_day, "term": "prev"}
-      daysinfo_arr.push(hash_1dayinfo) 
+      create_array_to_calendar(daysinfo_arr, target_day, "prev")
     end
     
     return daysinfo_arr
@@ -62,8 +61,7 @@ class CalendarsController < ApplicationController
     daysinfo_arr = []
     for i in 0..m_dates.end_of_month.day-1
       target_day = firstday_of_month.since(i.days)
-      hash_1dayinfo = {"dateinfo": target_day, "term": "curr"}
-      daysinfo_arr.push(hash_1dayinfo)
+      create_array_to_calendar(daysinfo_arr, target_day, "curr")
     end
     
     return daysinfo_arr
@@ -76,11 +74,23 @@ class CalendarsController < ApplicationController
     daysinfo_arr = []
     for i in 1..(6 - last_of_month.wday)
       target_day = last_of_month.since(i.days)
-      hash_1dayinfo = {"dateinfo": target_day, "term": "next"}
-      daysinfo_arr.push(hash_1dayinfo)
+      create_array_to_calendar(daysinfo_arr, target_day, "next")
     end
     
     return daysinfo_arr
+  end
+  
+  ##カレンダーページに渡すハッシュの配列を作成
+  def create_array_to_calendar(m_arr, m_target_day ,m_term)
+      dayinfo = Day.find_by(date: Time.local(m_target_day.year,m_target_day.month,m_target_day.day))
+      
+      if dayinfo != nil
+        msgcnt = Message.where(day_id: dayinfo.id).count
+      else
+        msgcnt = 0
+      end
+      hash_1dayinfo = {"dateinfo": m_target_day, "term": m_term, "message_count": msgcnt}
+      m_arr.push(hash_1dayinfo)
   end
   
   ##一次元配列を二次元配列に変換する
