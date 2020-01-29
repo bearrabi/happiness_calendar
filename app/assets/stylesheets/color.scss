@@ -9,6 +9,10 @@ body{  background-color: rgba(220,220,220,0.8);  }
   
   i{ color: white; }
 }
+.title h1 a{
+  text-decoration: none;
+  color: black;
+}
 
 /*leftbar*/
 #leftbar{  border: solid #aaa 1px; }
@@ -28,7 +32,7 @@ body{  background-color: rgba(220,220,220,0.8);  }
 #contents{  border: solid #aaa 1px;}
 
 /*devise page*/
-.page_form{  
+.page_form, .msg{  
   border: solid rgba(225, 192, 203, 1.0) 2px;
   background-color: rgba(224,255,255,0.4); 
 }
@@ -59,22 +63,46 @@ body{  background-color: rgba(220,220,220,0.8);  }
         tr td{  border: solid #000 2px;  }
   }
 }
-.sunday,.wday-0{
+
+.sunday,.wday-0{  
+  color: rgb(255,0,102);  
   background-color: rgba(225, 192, 203, 1.0);
-  color: rgb(255,0,102);
 }
-.saturday,.wday-6{
+.saturday,.wday-6{  
+  color: rgb(50,50,255);  
   background-color: rgba(173, 216, 230, 1.0);
-  color: rgb(50,50,255);
 }
+.wday-0 p{  color: rgb(255,0,102);  }
+.wday-6 p{  color: rgb(50,50,255);  }
 
 .daybox{
-  .edit{
+  .show,.new{
     border: solid #777 1px;
     text-decoration: none;
-    background-color: #808080;
-    color: white;
+    color: black;
+  }
+  .show{
+    background-color: rgba(225, 192, 203, 1.0);
+  }
+  .new{
+    background-color: rgba(173, 216, 230, 1.0);
+    
   }
 }
+.daybox:hover{  background-color: rgba(105,105,105, 0.8);  }
+.msgcnt{ background-color: rgba(225, 192, 203, 0.7); }
+.prev p, .next p{
+  opacity: 0.3;
+}
+.delete_btn{
+  background-color: rgba(120,120,120,0.8);
+  color: white;
   
+  text-decoration: none;
+}
+.edit_btn{
+  background-color: rgba(225, 192, 203, 1.0);
+  color: black;
+  text-decoration: none;
+}
 

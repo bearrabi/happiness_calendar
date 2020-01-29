@@ -20,9 +20,13 @@
       <tr>
       <% cal.each_with_index do |week,i| %>
         <td>
-          <div class="daybox wday-<%= i.to_s %>">
-            <p class="<%= week[:term] %>-wday-<%= i.to_s %>"><%= week[:day].to_s %></p>
-            <%= link_to 'message edit' , "" ,method: :post, remote: true, class: "edit" %>
+          <div class="<%= week[:term] %> daybox wday-<%= i.to_s %>">
+            <p class="day"><%= week[:dateinfo].day.to_s %></p>
+            <% if week[:message_count] > 0 %>
+              <p class="msgcnt"><%= week[:message_count]%>件のメッセージ</p>
+            <% end %>
+            <%= link_to 'show' , "messages_parts/year/#{week[:dateinfo].year.to_s}/month/#{week[:dateinfo].month.to_s}/day/#{week[:dateinfo].day.to_s}", class: "show" %>
+            <%= link_to 'new', "new_message/year/#{week[:dateinfo].year.to_s}/month/#{week[:dateinfo].month.to_s}/day/#{week[:dateinfo].day.to_s}", class: "new"%>
           </div>
         </td>
       <% end %>
