@@ -35,6 +35,10 @@ class MessagesController < ApplicationController
     redirect_to "/messages_all/#{current_user.id.to_s}"
   end
   
+  def destroy
+    Message.destroy(params[:id])
+    redirect_to "/messages_all/#{current_user.id.to_s}"
+  end
   ##特定ユーザーかつ、特定の日付のメッセージリストを表示
   def show_parts
     date = Time.local(params[:year].to_i, params[:month].to_i, params[:day].to_i)
@@ -47,6 +51,7 @@ class MessagesController < ApplicationController
     @messages = Message.where(user_id: current_user.id)
   end
   
+  private
   def message_params
     params.permit(:to_name, :to_email, :mail_title, :mail_contents, :user_id)
   end
