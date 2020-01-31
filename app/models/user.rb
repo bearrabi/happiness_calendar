@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
   
-  belongs_to :message
-  belongs_to :day
+  belongs_to :message, optional: true
+  belongs_to :day, optional: true
 end
